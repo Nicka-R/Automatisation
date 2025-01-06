@@ -2,12 +2,11 @@ version: '3.8'
 
 services:
   admin:
-    image: node:18
+    image: node:20
     container_name: immo-admin
     working_dir: /usr/src/app
     volumes:
-      - ./src:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./:/usr/src/app
     ports:
       - "3000:3000"
-    command: sh -c "npm install && npm start"
+    command: sh -c "npm ci && npm run dev"
