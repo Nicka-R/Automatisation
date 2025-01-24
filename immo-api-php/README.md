@@ -12,8 +12,8 @@ Simple API using Slim v4 MySQL and optionnaly S3 Storage
 
 - make sure you are in the immo-api-php directory
 - run docker compose up -d
-- then run docker compose exec -it <container id> -c "composer install"
+- then run `docker compose exec -it immo-api-php composer install`
 
 # database
 
-- import schema.sql in your database
+- Database is already imported in the docker container

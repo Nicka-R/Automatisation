@@ -1,10 +1,8 @@
 version: '3.7'
 
 services:
-  immo-api-php:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  immo-api-php: 
+    image: php:8.2
     container_name: immo-api-php
     volumes:
       - ./:/var/www/html
@@ -22,6 +20,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3306:3306"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
 
   adminer:
     image: adminer
