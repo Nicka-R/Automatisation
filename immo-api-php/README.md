@@ -16,4 +16,4 @@ Simple API using Slim v4 MySQL and optionnaly S3 Storage
 
 # database
 
-- import schema.sql in your database
+- Database is already imported in the docker container
