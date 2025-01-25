@@ -17,7 +17,13 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
+## Description
+
+- This is the client site of a real estate management application. Client can view the available properties.
+
 ## Run
+
 - Create `.env` from `.env.exemple`
+- Make sure to set the right port in the `.env` file `http://<api>:<port>/api` (in that case, the API is running on `localhost:9000`)
 - Update environement variable
 - run `docker compose up`
