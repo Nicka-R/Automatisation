@@ -8,5 +8,5 @@ services:
     volumes:
       - ./:/usr/src/app
     ports:
-      - "3306:3000"
+      - "3333:3000"
     command: sh -c "npm ci && npm run dev"

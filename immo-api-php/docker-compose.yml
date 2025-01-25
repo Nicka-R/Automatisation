@@ -9,7 +9,12 @@ services:
     ports:
       - "9000:9000"
     working_dir: /var/www/html
-    command: php -S 0.0.0.0:9000 -t ./public
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        docker-php-ext-install pdo pdo_mysql
+        php -S 0.0.0.0:9000 -t ./public
 
   mysql:
     image: mysql:8.0
